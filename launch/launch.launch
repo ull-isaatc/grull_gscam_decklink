@@ -1,0 +1,23 @@
+<launch>
+
+  <!-- Decliknk card 0 -->
+  <group ns="decklink0">
+    <include file="$(find grull_gscam_decklink)/launch/decklink.launch">
+      <arg name="DEVICE_NUMBER" value="0"/>
+      <arg name="CAMERA_NAME" value="default"/>
+      <arg name="CAMERA_INFO_URL" value="package://gscam/examples/uncalibrated_parameters.ini"/>
+      <arg name="FRAME_ID" default="decklink_camera0_link"/>
+    </include>
+  </group>
+
+  <!-- Decliknk card 1 -->
+  <group ns="decklink1">
+    <include file="$(find grull_gscam_decklink)/launch/decklink.launch">
+      <arg name="DEVICE_NUMBER" value="1"/>
+      <arg name="CAMERA_NAME" value="default"/>
+      <arg name="CAMERA_INFO_URL" value="package://gscam/examples/uncalibrated_parameters.ini"/>
+      <arg name="FRAME_ID" default="decklink_camera1_link"/>
+    </include>
+  </group>
+
+</launch>
