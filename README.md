@@ -12,6 +12,15 @@ Launch and configuration files for cameras connected to BlackMagic DeckLink capt
 
 ## BlackMagic DeckLink drivers
 
-The DeckLink drivers for your card can be downloaded from the [manufacturer web page](http://www.blackmagicdesign.com/support). Yet, in folder ```scripts``` there is a script which download a install it into the system:
+The DeckLink drivers for your card can be downloaded from the [manufacturer web page](http://www.blackmagicdesign.com/support). Yet, in ```scripts``` folder there is a script which download a install it into the system:
 
     $ scripts/install_libdecklink.sh
+
+## Launch
+
+There are two ROS launch files in ```launch``` folder:
+
+ * ```launch/decklink.launch``` by default, launch a GSCAM node for the first DeckLink capture card. It is configured for a
+camera connected through HDMI input.
+ * ```launch/launch.launch```, example of how to launch several GSCAM nodes. One for each DeckLink capture card.
+
